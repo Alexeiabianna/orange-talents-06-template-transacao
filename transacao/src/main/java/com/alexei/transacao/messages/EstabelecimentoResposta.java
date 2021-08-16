@@ -1,4 +1,6 @@
-package com.alexei.transacao;
+package com.alexei.transacao.messages;
+
+import com.alexei.transacao.model.Estabelecimento;
 
 public class EstabelecimentoResposta {
 
@@ -26,6 +28,10 @@ public class EstabelecimentoResposta {
 
     public String getEndereco() {
         return endereco;
+    }
+    
+    public Estabelecimento toEstabelecimento() {
+        return new Estabelecimento(nome, cidade, endereco);
     }
 
 }

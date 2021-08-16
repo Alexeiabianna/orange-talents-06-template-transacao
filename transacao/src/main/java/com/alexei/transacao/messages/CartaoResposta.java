@@ -1,4 +1,6 @@
-package com.alexei.transacao;
+package com.alexei.transacao.messages;
+
+import com.alexei.transacao.model.Cartao;
 
 public class CartaoResposta {
 
@@ -20,6 +22,10 @@ public class CartaoResposta {
 
     public String getEmail() {
         return email;
+    }
+
+    public Cartao toCartao() {
+        return new Cartao(id, email);
     }
 
 }

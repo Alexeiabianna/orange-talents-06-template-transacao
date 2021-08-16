@@ -1,7 +1,9 @@
-package com.alexei.transacao;
+package com.alexei.transacao.messages;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+
+import com.alexei.transacao.model.Transacao;
 
 public class EventoDeTransacao {
 
@@ -38,6 +40,10 @@ public class EventoDeTransacao {
 
     public LocalDateTime getEfetivadaEm() {
         return efetivadaEm;
+    }
+
+    public Transacao toTransacao() {
+        return new Transacao(id, valor, cartao, estabelecimento, efetivadaEm);
     }
 
 }

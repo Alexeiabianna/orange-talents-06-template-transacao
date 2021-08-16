@@ -1,4 +1,4 @@
-package com.alexei.transacao;
+package com.alexei.transacao.messages;
 
 import java.util.HashMap;
 import java.util.Map;
